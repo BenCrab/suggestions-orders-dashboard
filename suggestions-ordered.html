@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SOS Dashboard</title>
+        <!-- js -->
+        <link rel='stylesheet' href='scss/style.css' type='text/css'/>
+        <script src="js/app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <section class="sidebar">
+            <div class="logo">SOS</div>
+            <ul>
+                <li><a href="orders-inbox.html">Orders</a></li>
+                <li class="selected suggestions"><a href="suggestions.html">Suggestions</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+            <!-- I will change this into a link upon migration over to django -->
+            <div class="logout">Log out</div>
+        </section>
+
+        <section class="content">
+            <section class="top-bar">
+                <ul class="tabs">
+                    <li><a href="suggestions.html">Inbox (1)</a></li>
+                    <li><a href="suggestions-sent.html">Sent to Librarian (0)</a></li>
+                    <li><a href="suggestions-approved.html">Approved (0)</a></li>
+                    <li><a class="active-tab green" href="suggestions-ordered.html">Ordered (0)</a></li>
+                </ul>
+            </section>
+            <div class="actions-list">
+                <select name="" id="">
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                </select>
+                <span>|</span>
+                <div class="sort-by">
+                    <a><?xml version="1.0" encoding="utf-8"?>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                        <path d="M1408,1088c0,17.3-6.3,32.3-19,45l-448,448c-12.7,12.7-27.7,19-45,19s-32.3-6.3-45-19l-448-448c-12.7-12.7-19-27.7-19-45
+                        	s6.3-32.3,19-45s27.7-19,45-19h896c17.3,0,32.3,6.3,45,19S1408,1070.7,1408,1088z M1408,704c0,17.3-6.3,32.3-19,45s-27.7,19-45,19
+                        	H448c-17.3,0-32.3-6.3-45-19s-19-27.7-19-45s6.3-32.3,19-45l448-448c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l448,448
+                        	C1401.7,671.7,1408,686.7,1408,704z"/>
+                        </svg>Sort by
+                    </a>
+                    <ul class="sort-options" data-field="byu_library_sort" data-default="title">
+                        <li data-value="title">Title</li>
+                        <li data-value="date_ordered">Date Ordered</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="item-list">
+                <div class="item">
+                    <div class="item-info">
+                        <h1 class="title"><a class="green" href="">Show your work! 10 ways to share your creativity and get discovered</a></h1>
+                        <div class="subtitles">
+                            <div class="item-type-creator">
+                                <span class="type">Book</span><span>&thinsp;/&thinsp;</span><span class="creator">Austin Kleon</span>
+                            </div>
+                            <div class="item-status">
+                                <span>Ordered&thinsp;&mdash;&thinsp;21 Oct 2016</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-actions">
+                        <ul class="main-actions">
+                            <li><a href=""><?xml version="1.0" encoding="utf-8"?>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                                <path d="M1683,808l-742,741c-12.7,12.7-27.7,19-45,19s-32.3-6.3-45-19L109,808c-12.7-12.7-19-27.8-19-45.5s6.3-32.8,19-45.5l166-165
+                                	c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l531,531l531-531c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l166,165
+                                	c12.7,12.7,19,27.8,19,45.5S1695.7,795.3,1683,808z"/>
+                                </svg>
+                                View Details</a>
+                            </li>
+                        </ul>
+
+                        <!-- Different states based on main action interaction -->
+                        <!-- - - - - - - - - - - - - - - - -->
+
+                        <!-- <div class="confirm-cancel decline">
+                            <a href="">Cancel</a>
+                            <button>Confirm Declination</button>
+                        </div>
+
+                        <div class="confirm-cancel duplicate">
+                            <a href="">Cancel</a>
+                            <button>Confirm Duplicate</button>
+                        </div>
+
+                        <div class="ordered">
+                            <div class="cat-key-entry">
+                                <label for="">Catalog Key:</label>
+                                <input type="text">
+                            </div>
+                            <div class="confirm-cancel">
+                                <a class="cancel-button" href="">Cancel</a>
+                                <button class="confirm-button" href="">Confirm Order</button>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Item details shown when View details is clicked -->
+                    <!-- - - - - - - - - - - - - - - - -->
+
+                    <!-- <div class="item-details">
+                        <div class="details-1">
+                            <div class="pair">
+                                <h3>isbn</h3>
+                                <p>978-193349296-4</p>
+                                <span>copy isbn</span>
+                            </div>
+
+                            <div class="pair">
+                                <h3>url</h3>
+                                <p><a href="https://www.amazon.com/"></a>https://www.amazon.com/Show-Your-Work-Creativity...</p>
+                            </div>
+
+                            <div class="pair">
+                                <h3>any edition</h3>
+                                <p>Yes</p>
+                            </div>
+                        </div>
+
+                        <div class="details-2">
+                            <h3>additional item information</h3>
+                            <p>If you have trouble finding it, please let me know.</p>
+                        </div>
+
+                        <div class="details-3">
+                            <h3>contact information</h3>
+                            <ul>
+                                <li class="name">Joseph Call</li>
+                                <li class="email"><a href="">joseph_call@byu.edu</a></li>
+                                <li class="phone">801-422-3433</li>
+                                <li class="room">2321 JFSB</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+        </section>
+    </body>
+</html>
