@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>SOS Dashboard</title>
-        <!-- js -->
+        <link rel="shortcut icon" href="https://lib.byu.edu/favicon.ico">
         <link rel='stylesheet' href='scss/style.css' type='text/css'/>
+        <!-- js -->
         <script src="js/app.js" charset="utf-8"></script>
     </head>
     <body>
@@ -19,68 +20,167 @@
             <div class="logout">Log out</div>
         </section>
 
-        <section class="content new-order">
-            <h1>New Order</h1>
-            <form action="">
-                <section class="columns">
-                    <div class="left-column">
-                        <div class="form-title">
-                            <label for="">Title <span class="required">*</span></label>
-                            <input type="text">
-                        </div>
-                        <div class="form-creator">
-                            <label for="">Author/Creator <span class="required">*</span></label>
-                            <input type="text">
-                        </div>
-                        <div class="form-isbn">
-                            <label for="">ISBN</label>
-                            <input type="text">
-                        </div>
-                    </div>
+        <section class="content">
+            <section class="top-bar">
+                <ul class="tabs">
+                    <li><a class="active-tab blue" href="orders-inbox.html">Inbox (1)</a></li>
+                    <li><a href="orders-ordered.html">Ordered (0)</a></li>
+                </ul>
+            </section>
+            <div class="actions-list">
+                <a class="add-order" href="new-order.html"><?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                    <path d="M1344,960V832c0-17.3-6.3-32.3-19-45s-27.7-19-45-19h-256V512c0-17.3-6.3-32.3-19-45s-27.7-19-45-19H832
+                    	c-17.3,0-32.3,6.3-45,19s-19,27.7-19,45v256H512c-17.3,0-32.3,6.3-45,19s-19,27.7-19,45v128c0,17.3,6.3,32.3,19,45s27.7,19,45,19
+                    	h256v256c0,17.3,6.3,32.3,19,45s27.7,19,45,19h128c17.3,0,32.3-6.3,45-19s19-27.7,19-45v-256h256c17.3,0,32.3-6.3,45-19
+                    	S1344,977.3,1344,960z M1664,896c0,139.3-34.3,267.8-103,385.5s-161.8,210.8-279.5,279.5s-246.2,103-385.5,103
+                    	s-267.8-34.3-385.5-103S299.7,1399.2,231,1281.5S128,1035.3,128,896s34.3-267.8,103-385.5S392.8,299.7,510.5,231S756.7,128,896,128
+                    	s267.8,34.3,385.5,103s210.8,161.8,279.5,279.5S1664,756.7,1664,896z"/>
+                    </svg>Add Order
+                </a>
+                <span>|</span>
+                <div class="sort-by">
+                    <a><?xml version="1.0" encoding="utf-8"?>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                        <path d="M1408,1088c0,17.3-6.3,32.3-19,45l-448,448c-12.7,12.7-27.7,19-45,19s-32.3-6.3-45-19l-448-448c-12.7-12.7-19-27.7-19-45
+                        	s6.3-32.3,19-45s27.7-19,45-19h896c17.3,0,32.3,6.3,45,19S1408,1070.7,1408,1088z M1408,704c0,17.3-6.3,32.3-19,45s-27.7,19-45,19
+                        	H448c-17.3,0-32.3-6.3-45-19s-19-27.7-19-45s6.3-32.3,19-45l448-448c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l448,448
+                        	C1401.7,671.7,1408,686.7,1408,704z"/>
+                        </svg>Sort by
+                    </a>
+                    <ul class="sort-options" data-field="byu_library_sort" data-default="title">
+                        <li data-value="title">Title</li>
+                        <li data-value="date_ordered">Date Ordered</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <div class="right-column">
-                        <div class="form-type">
-                            <label for="">Item Type <span class="required">*</span></label>
-                            <select name="" id="">
-                                <option value="">Select a Type</option>
-                                <option value="">Select a Type</option>
-                                <option value="">Select a Type</option>
-                                <option value="">Select a Type</option>
-                            </select>
-                        </div>
-                        <div class="form-name">
-                            <label for="">Faculty Name <span class="required">*</span></label>
-                            <div class="live-select">
-                                <input type="text" placeholder="Type the name of a faculty member"></input>
-                                <ul class="select-list">
-                                    <li>Agatha, Robert</li>
-                                    <li>Allen, Rhett</li>
-                                    <li>Beasley, Aaron</li>
-                                    <li>Knight, Karen</li>
-                                </ul>
+            <section class="item-list">
+                <div class="item">
+                    <div class="item-info">
+                        <h1 class="title"><a href="">Show your work! 10 ways to share your creativity and get discovered</a></h1>
+                        <div class="subtitles">
+                            <div class="item-type-creator">
+                                <span class="type">Book</span><span>&thinsp;/&thinsp;</span><span class="creator">Austin Kleon</span>
+                            </div>
+                            <div class="item-status">
+                                <span>Received&thinsp;&mdash;&thinsp;9 Oct 2016</span>
                             </div>
                         </div>
-                        <div class="form-url">
-                            <label for="">URL (Amazon, etc.)</label>
-                            <input type="text">
+                    </div>
+
+                    <div class="item-actions">
+                        <ul class="main-actions">
+                            <div class="action-set">
+                                <li class="decline-order"><a href="">Decline Order</a></li>
+                                <li><a href=""><?xml version="1.0" encoding="utf-8"?>
+                                <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                                <path d="M1696,384c26.7,0,49.3,9.3,68,28s28,41.3,28,68v1216c0,26.7-9.3,49.3-28,68s-41.3,28-68,28H736c-26.7,0-49.3-9.3-68-28
+                                	s-28-41.3-28-68v-288H96c-26.7,0-49.3-9.3-68-28s-28-41.3-28-68V640c0-26.7,6.7-56,20-88s29.3-57.3,48-76L476,68
+                                	c18.7-18.7,44-34.7,76-48s61.3-20,88-20h416c26.7,0,49.3,9.3,68,28s28,41.3,28,68v328c45.3-26.7,88-40,128-40H1696z M1152,597
+                                	L853,896h299V597z M512,213L213,512h299V213z M708,860l316-316V128H640v416c0,26.7-9.3,49.3-28,68s-41.3,28-68,28H128v640h512v-256
+                                	c0-26.7,6.7-56,20-88S689.3,878.7,708,860z M1664,1664V512h-384v416c0,26.7-9.3,49.3-28,68s-41.3,28-68,28H768v640H1664z"/>
+                                </svg>
+                                Mark as Duplicate</a>
+                            </li>
+                            </div>
+                            <div class="action-set">
+                                <li><a href=""><?xml version="1.0" encoding="utf-8"?>
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                                    <path d="M1683,808l-742,741c-12.7,12.7-27.7,19-45,19s-32.3-6.3-45-19L109,808c-12.7-12.7-19-27.8-19-45.5s6.3-32.8,19-45.5l166-165
+                                    	c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l531,531l531-531c12.7-12.7,27.7-19,45-19s32.3,6.3,45,19l166,165
+                                    	c12.7,12.7,19,27.8,19,45.5S1695.7,795.3,1683,808z"/>
+                                    </svg>
+                                    View Details</a>
+                                </li>
+                                <li><a href=""><?xml version="1.0" encoding="utf-8"?>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                	 viewBox="0 0 1792 1792" style="enable-background:new 0 0 1792 1792;" xml:space="preserve">
+                                <path d="M640,1408c0-34.7-12.7-64.7-38-90s-55.3-38-90-38s-64.7,12.7-90,38s-38,55.3-38,90s12.7,64.7,38,90s55.3,38,90,38
+                                	s64.7-12.7,90-38S640,1442.7,640,1408z M256,896h384V640H482c-8.7,0-16,3-22,9L265,844c-6,6-9,13.3-9,22V896z M1536,1408
+                                	c0-34.7-12.7-64.7-38-90s-55.3-38-90-38s-64.7,12.7-90,38s-38,55.3-38,90s12.7,64.7,38,90s55.3,38,90,38s64.7-12.7,90-38
+                                	S1536,1442.7,1536,1408z M1792,320v1024c0,10-1.3,18.8-4,26.5s-7.2,13.8-13.5,18.5s-11.8,8.5-16.5,11.5s-12.5,5-23.5,6
+                                	s-18.5,1.7-22.5,2s-12.5,0.3-25.5,0s-20.5-0.5-22.5-0.5c0,70.7-25,131-75,181s-110.3,75-181,75s-131-25-181-75s-75-110.3-75-181H768
+                                	c0,70.7-25,131-75,181s-110.3,75-181,75s-131-25-181-75s-75-110.3-75-181h-64c-2,0-9.5,0.2-22.5,0.5s-21.5,0.3-25.5,0
+                                	s-11.5-1-22.5-2s-18.8-3-23.5-6s-10.2-6.8-16.5-11.5s-10.8-10.8-13.5-18.5s-4-16.5-4-26.5c0-17.3,6.3-32.3,19-45s27.7-19,45-19V960
+                                	c0-5.3-0.2-17-0.5-35s-0.3-30.7,0-38s1.2-18.8,2.5-34.5s3.5-28,6.5-37s7.7-19.2,14-30.5s13.8-21.3,22.5-30l198-198
+                                	c12.7-12.7,29.5-23.3,50.5-32s40.5-13,58.5-13h160V320c0-17.3,6.3-32.3,19-45s27.7-19,45-19h1024c17.3,0,32.3,6.3,45,19
+                                	S1792,302.7,1792,320z"/>
+                                </svg>Mark as Ordered</a></li>
+                            </div>
+                        </ul>
+
+                        <!-- Different states based on main action interaction -->
+                        <!-- - - - - - - - - - - - - - - - -->
+
+                        <!-- <div class="confirm-cancel decline">
+                            <a href="">Cancel</a>
+                            <button class="button-orders">Confirm Declination</button>
+                        </div>
+
+                        <div class="confirm-cancel duplicate">
+                            <a href="">Cancel</a>
+                            <button class="button-orders">Confirm Duplicate</button>
+                        </div>
+
+                        <div class="ordered">
+                            <div class="cat-key-entry">
+                                <label for="">Catalog Key:</label>
+                                <input type="text" placeholder="e.g. 2141240">
+                            </div>
+                            <div class="confirm-cancel">
+                                <a class="cancel-button" href="">Cancel</a>
+                                <button class="confirm-button button-orders" href="">Confirm Order</button>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Item details shown when View details is clicked -->
+                    <!-- - - - - - - - - - - - - - - - -->
+
+                    <div class="item-details">
+                        <div class="details-1">
+                            <div class="pair">
+                                <h3>isbn</h3>
+                                <p>978-193349296-4</p>
+                                <span class="copy-isbn">copy isbn</span>
+                            </div>
+
+                            <div class="pair">
+                                <h3>url</h3>
+                                <p><a href="https://www.amazon.com/">https://www.amazon.com/Show-Your-Work-Creativity...</a></p>
+                            </div>
+
+                            <div class="pair">
+                                <h3>any edition</h3>
+                                <p>Yes</p>
+                            </div>
+                        </div>
+
+                        <div class="details-2">
+                            <h3>additional item information</h3>
+                            <p>If you have trouble finding it, please let me know.</p>
+                        </div>
+
+                        <div class="details-3">
+                            <h3>contact information</h3>
+                            <ul>
+                                <li class="name">Joseph Call</li>
+                                <li class="email"><a href="">joseph_call@byu.edu</a></li>
+                                <li class="phone">801-422-3433</li>
+                                <li class="room">2321 JFSB</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <section class="bottom-half">
-                    <div class="item-edition">
-                        <input type="checkbox"></input>
-                        <span>Will the faculty member accept any edition? (Select if unspecified by faculty)</span>
-                    </div>
-                    <label for="">Additional Information</label>
-                    <textarea wrap="hard"></textarea>
-                </section>
 
-                <section class="confirm-cancel">
-                    <a href="orders-inbox.html">Cancel</a>
-                    <button class="confirm-button button-orders">Add Order</button>
-                </section>
-            </form>
         </section>
     </body>
 </html>
