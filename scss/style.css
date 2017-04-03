@@ -295,6 +295,8 @@ header {
     font-size: 2rem;
     position: absolute;
     right: 24rem; }
+    .content .actions-list.ordered-actions {
+      margin-top: -.5rem; }
     @media screen and (min-width: 900px) {
       .content .actions-list {
         right: 13rem; } }

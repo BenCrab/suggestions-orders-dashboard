@@ -377,6 +377,10 @@ header {
         position: absolute;
         right: 24rem;
 
+        &.ordered-actions {
+            margin-top: -.5rem;
+        }
+
         @media screen and (min-width: 900px) {
             right: 13rem;
         }
