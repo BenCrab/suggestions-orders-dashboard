@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SOS Dashboard</title>
+        <!-- js -->
+        <link rel='stylesheet' href='scss/style.css' type='text/css'/>
+        <script src="js/app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <section class="sidebar">
+            <div class="logo">SOS</div>
+            <ul>
+                <li class="selected orders"><a href="index.html">Orders</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+            <!-- I will change this into a link upon migration over to django -->
+            <div class="logout">Log out</div>
+        </section>
+
+        <section class="content new-order">
+            <h1>New Order</h1>
+            <form action="">
+                <section class="columns">
+                    <div class="left-column">
+                        <div class="form-title">
+                            <label for="">Title <span class="required">*</span></label>
+                            <input type="text">
+                        </div>
+                        <div class="form-creator">
+                            <label for="">Author/Creator <span class="required">*</span></label>
+                            <input type="text">
+                        </div>
+                        <div class="form-isbn">
+                            <label for="">ISBN</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="right-column">
+                        <div class="form-type">
+                            <label for="">Item Type <span class="required">*</span></label>
+                            <select name="" id="">
+                                <option value="">Select a Type</option>
+                                <option value="">Select a Type</option>
+                                <option value="">Select a Type</option>
+                                <option value="">Select a Type</option>
+                            </select>
+                        </div>
+                        <div class="form-name">
+                            <label for="">Faculty Name <span class="required">*</span></label>
+                            <div class="live-select">
+                                <input type="text" placeholder="Type the name of a faculty member"></input>
+                                <ul class="select-list">
+                                    <li>Agatha, Robert</li>
+                                    <li>Allen, Rhett</li>
+                                    <li>Beasley, Aaron</li>
+                                    <li>Knight, Karen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-url">
+                            <label for="">URL (Amazon, etc.)</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bottom-half">
+                    <div class="item-edition">
+                        <input type="checkbox"></input>
+                        <span>Will the faculty member accept any edition? (Select if unspecified by faculty)</span>
+                    </div>
+                    <label for="">Additional Information</label>
+                    <textarea wrap="hard"></textarea>
+                </section>
+
+                <section class="confirm-cancel">
+                    <a href="orders-inbox.html">Cancel</a>
+                    <button class="confirm-button button-orders">Add Order</button>
+                </section>
+            </form>
+        </section>
+    </body>
+</html>
