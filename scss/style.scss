@@ -11,7 +11,7 @@ $blue: #3C6EB2;
 $green: #69A847;
 $purple: #844AB7;
 $border: #E2E7EE;
-$font: 'Source Sans Pro';
+$fonts: 'Source Sans Pro', sans-serif;
 
 // Document Setup
 /////////////////////////////
@@ -30,7 +30,7 @@ body {
     background-color: #F3F3F3;
     box-sizing: border-box;
     color: #4c4c4c;
-	font-family: 'Source Sans Pro';
+	font-family: $fonts;
 	line-height: 1;
     min-width: 73rem;
     position: relative;
